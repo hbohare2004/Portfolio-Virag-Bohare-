@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ArrowRight, FlaskConical, Mail } from "lucide-react";
-import { LinkedinIcon, FacebookIcon } from "./SocialIcons";
+import { LinkedinIcon, FacebookIcon, InstagramIcon } from "./SocialIcons";
 
 const roles = [
   "Global MHM Consultant",
@@ -80,9 +80,9 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <div className="absolute -bottom-2 -right-2 rounded-full bg-secondary p-2 shadow-lg lg:-bottom-3 lg:-right-3 lg:p-3">
+            {/* <div className="absolute -bottom-2 -right-2 rounded-full bg-secondary p-2 shadow-lg lg:-bottom-3 lg:-right-3 lg:p-3">
               <FlaskConical className="h-5 w-5 text-primary-dark lg:h-6 lg:w-6" />
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -155,6 +155,15 @@ export default function Hero() {
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com/viragbohare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/10 p-2.5 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-secondary/30"
+              aria-label="Instagram"
+            >
+              <InstagramIcon size={20} />
             </a>
             <a
               href="https://www.facebook.com/viragbohare"

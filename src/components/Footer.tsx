@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react";
-import { LinkedinIcon, FacebookIcon } from "./SocialIcons";
+import { LinkedinIcon, FacebookIcon, InstagramIcon } from "./SocialIcons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -37,6 +37,15 @@ export default function Footer() {
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={18} />
+            </a>
+            <a
+              href="https://www.instagram.com/viragbohare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/10 p-2.5 transition-all hover:scale-110 hover:bg-secondary/30"
+              aria-label="Instagram"
+            >
+              <InstagramIcon size={18} />
             </a>
             <a
               href="https://www.facebook.com/viragbohare"

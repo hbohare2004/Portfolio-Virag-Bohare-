@@ -23,12 +23,12 @@ const services = [
     description:
       "Semi-automatic & automatic machines producing up to 1,200 pads/hour on single-phase electricity—at 1/10th the cost of imported alternatives.",
   },
-  {
-    icon: Package,
-    title: "Raw Material Supply",
-    description:
-      "Premium top sheets, absorbent cores, backing, and packaging with a reliable global supply chain and competitive bulk pricing.",
-  },
+  // {
+  //   icon: Package,
+  //   title: "Raw Material Supply",
+  //   description:
+  //     "Premium top sheets, absorbent cores, backing, and packaging with a reliable global supply chain and competitive bulk pricing.",
+  // },
   {
     icon: BookOpen,
     title: "Vocational Training",
@@ -41,25 +41,25 @@ const services = [
     description:
       "Strategic MHM awareness programmes for schools, universities, government bodies, and corporate CSR initiatives—pairing hygiene promotion with safe disposal and evidence-informed waste-to-energy opportunities.",
   },
-  {
-    icon: Wrench,
-    title: "Maintenance & Upgrades",
-    description:
-      "On-site troubleshooting, preventive maintenance, machine retrofits, and remote technical support for installed units worldwide.",
-  },
-  {
-    icon: Sun,
-    title: "Solar-Powered Solutions",
-    description:
-      "Off-grid sanitary napkin machines powered by solar energy—engineered for remote and underserved regions with limited electricity access.",
-  },
+  // {
+  //   icon: Wrench,
+  //   title: "Maintenance & Upgrades",
+  //   description:
+  //     "On-site troubleshooting, preventive maintenance, machine retrofits, and remote technical support for installed units worldwide.",
+  // },
+  // {
+  //   icon: Sun,
+  //   title: "Solar-Powered Solutions",
+  //   description:
+  //     "Off-grid sanitary napkin machines powered by solar energy—engineered for remote and underserved regions with limited electricity access.",
+  // },
 ];
 
 const stats = [
-  { value: "10+", label: "Years of Global Impact" },
-  { value: "50+", label: "Delivered Sessions on Menstrual Hygiene" },
-  { value: "3k+", label: "Beneficied Participants Across Multiple States" },
-  { value: "1M+", label: "Sanitary Pads Distributed" },
+  { value: "15+", label: "Years of Impact" },
+  { value: "2M+", label: "Women & Girls Benefited" },
+  { value: "500+", label: "Renowned Organizations Partnered" },
+  { value: "5M+", label: "Sanitary Pads Distributed" },
 ];
 
 const recognitions = [

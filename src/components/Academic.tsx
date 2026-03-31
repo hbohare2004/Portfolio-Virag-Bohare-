@@ -8,6 +8,7 @@ import {
   Leaf,
   BrainCircuit,
 } from "lucide-react";
+import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
 
 const education = [
@@ -60,6 +61,44 @@ const researchAreas = [
       "Translating research into field-ready, community-scale solutions for educational institutions, NGOs, and policy implementers—bridging science with implementation.",
   },
 ];
+
+type StatItemProps = {
+  value: string;
+  label: string;
+};
+
+function StatItem({ value, label }: StatItemProps) {
+  return (
+    <div className="flex h-full flex-col items-center justify-center rounded-2xl bg-white p-5 text-center shadow-md sm:p-6">
+      <div className="mb-1 text-2xl font-extrabold text-primary sm:text-3xl">
+        {value}
+      </div>
+      <p className="text-xs font-medium text-charcoal-light sm:text-sm">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type CardProps = {
+  title: string;
+  lines: string[];
+};
+
+function ImpactCard({ title, lines }: CardProps) {
+  return (
+    <div className="group flex h-full flex-col rounded-2xl bg-white p-5 text-left shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg sm:p-6">
+      <h5 className="mb-2 text-sm font-bold text-charcoal sm:text-base">
+        {title}
+      </h5>
+      <ul className="space-y-1 text-xs text-charcoal-light sm:text-sm">
+        {lines.map((line) => (
+          <li key={line}>• {line}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function Academic() {
   return (
@@ -159,35 +198,71 @@ export default function Academic() {
               ))}
             </div>
 
-            {/* Publications placeholder */}
-            <AnimateOnScroll className="animate-fade-in-up">
-              <div className="mt-8 rounded-2xl border-2 border-dashed border-secondary/40 bg-secondary/[0.04] p-6 text-center">
-                <BookOpen size={32} className="mx-auto mb-3 text-secondary/60" />
-                <h4 className="mb-1 font-bold text-charcoal">
-                  Outreach, Training &amp; Thought Leadership
-                </h4>
-                <ul className="mt-3 space-y-2 text-left text-sm text-charcoal-light">
-                  <li>
-                    • 10+ years of dedicated work in Menstrual Hygiene Management (MHM),
-                    with a strong focus on awareness, dignity, and menstrual pride.
-                  </li>
-                  <li>
-                    • Conducted education and awareness sessions for school girls,
-                    college students, and women through community-focused programmes.
-                  </li>
-                  <li>
-                    • Delivered talks and engagements at leading institutions including
-                    Vimala Autonomous College Thrissur, IGEC Sagar, NITTTR, NSIC,
-                    Adani Foundation, IIT Roorkee, and Chamber of Commerce MP.
-                  </li>
-                  <li>
-                    • Enabled women&rsquo;s empowerment through practical, skill-oriented
-                    training and implementation-focused capacity building.
-                  </li>
-                </ul>
-              </div>
-            </AnimateOnScroll>
           </div>
+        </div>
+
+        {/* Advocacy & Partners — two-column row below */}
+        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-12">
+          {/* Left: Menstrual Health Advocacy & Leadership */}
+          <AnimateOnScroll className="animate-slide-in-left">
+            <div className="flex h-full flex-col rounded-2xl border-2 border-dashed border-secondary/40 bg-secondary/[0.04] p-6 text-center sm:p-7">
+              <div className="flex flex-col items-center gap-2">
+                <BookOpen size={32} className="text-secondary/70" />
+                <h4 className="text-lg font-bold text-charcoal sm:text-xl">
+                  Menstrual Health Advocacy &amp; Leadership
+                </h4>
+                <p className="max-w-xl text-xs text-charcoal-light sm:text-sm">
+                  Driving menstrual health awareness, innovation, and sustainable
+                  impact across institutions and communities.
+                </p>
+              </div>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <StatItem value="10+" label="Years of Global Impact" />
+                <StatItem value="50K+" label="Women & Girls Reached" />
+                <StatItem value="100+" label="Partner Organisations" />
+                <StatItem value="1M+" label="Sanitary Pads Distributed" />
+              </div>
+            </div>
+          </AnimateOnScroll>
+
+          {/* Right: Partner Logos */}
+          <AnimateOnScroll className="animate-slide-in-right">
+            <div className="flex h-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-secondary/40 bg-secondary/[0.04] p-6 text-center sm:p-8">
+              <h5 className="mb-6 text-sm font-bold uppercase tracking-widest text-secondary sm:text-base lg:text-lg">
+                Empowering Women — Our Partners
+              </h5>
+              <div className="mx-auto flex max-w-md flex-wrap items-center justify-center gap-5 sm:gap-6">
+                {[
+                  { src: "/images/logo-partner1.webp", alt: "MANIT Bhopal" },
+                  { src: "/images/logo-partner2.png", alt: "IGEC Sagar" },
+                  { src: "/images/logo-partner3.jpg", alt: "Round Table India" },
+                  { src: "/images/logo-partner4.png", alt: "NITTTR Bhopal" },
+                  { src: "/images/logo-partner5.png", alt: "BHU" },
+                  { src: "/images/logo-partner6.webp", alt: "IIT Roorkee" },
+                  { src: "/images/logo-partner7.png", alt: "NMDC" },
+                  { src: "/images/logo-partner8.jpg", alt: "Central Coalfields" },
+                  { src: "/images/logo-partner9.jpg", alt: "Navodaya Vidyalaya" },
+                  { src: "/images/logo-partner10.webp", alt: "Vimala College Thrissur" },
+                  { src: "/images/logo-partner11.jpg", alt: "Adani Foundation" },
+                  { src: "/images/logo-partner12.png", alt: "Rotary International" },
+                ].map((logo) => (
+                  <Image
+                    key={logo.src}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={80}
+                    height={80}
+                    className="h-11 w-11 rounded-lg object-contain transition-transform hover:scale-110 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
+                  />
+                ))}
+              </div>
+              <p className="mt-4 mx-auto max-w-sm text-xs text-charcoal-light sm:text-sm">
+                Bridging menstrual health, sustainability, and decentralised
+                manufacturing for social impact.
+              </p>
+            </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
