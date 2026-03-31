@@ -9,6 +9,16 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    const text = `*New Portfolio Inquiry*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
+    const whatsappUrl = `https://wa.me/919425128596?text=${text}`;
+
+    window.open(whatsappUrl, "_blank");
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
   };
