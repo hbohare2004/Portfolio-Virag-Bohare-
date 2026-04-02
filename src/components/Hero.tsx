@@ -104,7 +104,7 @@ export default function Hero() {
           </div>
 
           <p className="mx-auto mb-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg lg:mx-0">
-            PhD Scholar &amp; Founder of{" "}
+            PhD Scholar &amp; Co-Founder of{" "}
             <span className="font-bold text-secondary">Rag Innovations</span>
             —advising governments, institutions, and international organisations
             on menstrual hygiene management, sustainable manufacturing, and
@@ -157,15 +157,6 @@ export default function Hero() {
               <LinkedinIcon size={20} />
             </a>
             <a
-              href="https://www.instagram.com/viragbohare/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-white/10 p-2.5 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-secondary/30"
-              aria-label="Instagram"
-            >
-              <InstagramIcon size={20} />
-            </a>
-            <a
               href="https://www.facebook.com/viragbohare"
               target="_blank"
               rel="noopener noreferrer"
@@ -174,6 +165,16 @@ export default function Hero() {
             >
               <FacebookIcon size={20} />
             </a>
+            <a
+              href="https://www.instagram.com/viragbohare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/10 p-2.5 text-white backdrop-blur-sm transition-all hover:scale-110 hover:bg-secondary/30"
+              aria-label="Instagram"
+            >
+              <InstagramIcon size={20} />
+            </a>
+           
           </div>
         </div>
       </div>

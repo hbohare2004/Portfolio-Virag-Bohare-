@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="text-secondary">Virag</span> Bohare
             </p>
             <p className="mt-1 text-sm text-white/60">
-              Global MHM Consultant &amp; Founder,{" "}
+              Global MHM Consultant &amp; Co-Founder,{" "}
               <a
                 href="https://www.raginnovations.com/"
                 target="_blank"

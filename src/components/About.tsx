@@ -48,7 +48,7 @@ export default function About() {
                 I am <span className="font-semibold text-charcoal">Virag Bohare</span>—an
                 internationally recognised expert in menstrual hygiene management,
                 social entrepreneurship, and sustainable energy research. As a PhD
-                Scholar at MANIT Bhopal and Founder of{" "}
+                Scholar at MANIT Bhopal and Co-Founder of{" "}
                 <span className="font-semibold text-primary">Rag Innovations</span>,
                 I operate at the intersection of academic research, policy advisory,
                 and grassroots impact.
